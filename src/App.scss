@@ -1,0 +1,23 @@
+//* App styling
+.app {
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  &.dark{
+    height: 100vh;
+    box-sizing: border-box;
+    background:#161927;
+    overflow: hidden;
+  }
+  .grid{
+    display: grid;
+  }
+}
+
+.skills__bar.dark{
+  background-color: white;
+}
+.skills__percentage.dark {
+  background-color: #f72585;
+}

@@ -1,0 +1,148 @@
+//* Intro styling
+
+.intro {
+  background-image: linear-gradient(to bottom, #d8f3dc, #c8ebd0, #b8e4c6, #a7dcbb, #95d5b2);
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+
+  //* Dark Mode
+  &--dark{
+    background-color:#161927 ;
+    width: 100%;
+    height: 80vh;
+  }
+
+  &__content{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    right: 10%;
+    animation: fadeIn 2s forwards;
+
+
+    &--title{
+      font-size: 8vh;
+      font-family: "Heebo";
+      letter-spacing: .05rem;
+      line-height: 1;
+      color: white;
+      animation: fadeIn 2s forwards;
+      
+    }
+
+    &--data{
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        margin-top: 60px;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &--container{
+      max-width: 55%;
+      max-height: 60%;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-title{
+        width: 100%;
+        color: white;
+        padding: 10px;
+        font-size: 2vw ;
+        line-height: 6vh;
+        font-family: 'Heebo', sans-serif; 
+        font-weight: normal;
+      }
+      .typed-text{
+        font-weight: bolder;
+        color: #52b788,;
+      }
+      &-image{
+        max-width: 55%;
+        display: grid;
+        place-items: center;
+
+      }
+
+    }
+
+  }
+}
+
+i{
+cursor: pointer;
+}
+
+//* Keyframes animations
+@keyframes fadeIn {
+0% {
+  opacity: 0;
+}
+100% {
+  opacity: 1;
+}
+}
+
+@keyframes floatingimage {
+0% { transform: translateY(0rem) translateX(0rem); }
+50% { transform: translateY(-2rem) translateX(1rem); }
+100% { transform: translateY(0rem) translateX(0rem); }
+} 
+
+.image {
+max-width: 55%;
+max-height: 800px;
+margin-left: auto;
+margin-right: auto;
+display: block;
+justify-content: center;
+align-items: center;
+box-shadow: 0 0 0 20px white ;
+
+}
+
+@media screen and (max-width: 800px) {
+  .intro__content--title{
+    font-size: 4vh;
+  }
+  .intro__content--data{
+    flex-direction: column;
+    margin-top: 20px;
+    position: relative;
+    
+    
+  }
+
+  .intro__content--container{
+    min-width: 100%;
+    margin-bottom: 10%;
+    text-align: justify;
+
+    &-title{
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 4vh;
+    }
+  }
+  .intro__content--container-image{
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  .image{
+    max-width: 80%;
+  }
+}
+//* Responsive desing
+@media screen and (min-device-width: 800px) and (max-device-width: 915px) { 
+.intro__content--container-title{
+  line-height: 4vh;
+}
+}

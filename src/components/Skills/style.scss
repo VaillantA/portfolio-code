@@ -1,0 +1,212 @@
+//* Skills Styling
+.skills--dark{
+  background-color: #161927;
+}
+
+.skills {
+  background-image: linear-gradient(to bottom, #95d5b2, #85cea7, #75c69d, #64bf92, #52b788);
+  // background-color: white;
+  display: grid;
+  font-family:'Heebo';
+  place-items: center;
+  position: relative;
+
+  &__section{
+    position: absolute;
+    top: 10%;
+    margin-top: 50px;
+  }
+}
+
+.skills__container{
+  row-gap: 0;
+  margin-top: 50px;
+  width: 700px;
+  
+}
+.skills__main--container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.skills__header{
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+}
+
+.skills__icon,
+.skills__arrow {
+  font-size: 2rem;
+  color: #52B788;
+}
+
+.skills__icon.dark{
+  color: #f72585;
+}
+
+.skills__arrow.dark-change{
+  color: #f72585;
+}
+.skills__icon{
+  margin-right: .75rem;
+}
+
+.skills__title--main{
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 4.5rem;
+  color: #40916C;
+  font-family: Heebo;
+  animation: fadeIn 2s forwards;
+
+}
+.skills__title--main.dark{
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 4.5rem;
+  color: #fff;
+  font-family: Heebo;
+}
+.skills__subtitle--second {
+  text-align: center;
+  color: #40916C;
+  font-size: 2rem;
+}
+.skills__subtitle--second.dark {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+}
+.skills__subtitle{
+  font-size: 0.813rem;
+  text-align: center;
+  color: #40916C;
+  // background-color: white;
+}
+.skills__subtitle.dark{
+  color: #f72585;
+}
+.skills__title{
+  font-size: 1.25rem;
+}
+.skills__title.dark {
+  color: white;
+}
+.skills__arrow{
+  margin-left: auto;
+  transition: .4s;
+}
+
+.skills__data{
+  margin-bottom: 10px;
+}
+.skills__titles{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.skills__name{
+  font-size: 1rem;
+  font-weight: 500;
+}
+.skills__name.dark{
+  color: white;
+}
+
+.skills__number.dark{
+  color: white;
+}
+.skills__bar,
+.skills__percentage {
+  height: 10px;
+  border-radius: 0.25rem;
+}
+
+.skills__bar{
+  background-color: #D8F3DC;
+
+  &.dark{
+    background-color: #f72585;
+  }
+}
+
+.skills__percentage {
+  display: block;
+  background-color: #95D5B2;
+  height: 100%;
+}
+
+.skills__html{
+  width: 90%;
+}
+.skills__css{
+  width: 80%;
+}
+.skills__react{
+  width: 70%;
+}
+.skills__js{
+  width: 60%;
+}
+.skills__php{
+  width: 50%;
+}
+.skills__admin{
+  width: 50%;
+}
+.skills__mvc{
+  width: 40%;
+}
+
+.skills__close .skills__list {
+  height: 0;
+  overflow: hidden;
+}
+
+.skills__open .skills_list {
+  height: max-content;
+  margin-bottom: 2.5rem;
+}
+
+.skills__close .skills__arrow{
+  transform: rotate(-180def);
+}
+
+@media screen and (max-width: 800px) {
+  .skills__section{
+    position: absolute;
+    top: 5%;
+    margin-top: 20px;
+    max-height: 85.8vh;
+  
+  }
+  .skills__header{
+    margin-bottom: 1em;
+  }
+  .skills__title--main{
+    display: none;
+  }
+  .skills__content.skills__open{
+
+  }
+  .skills__container{
+    width: 80vh;
+
+    &.container{
+      height: 100%;
+    }
+  }
+  .skills__main--container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+  }
+  .skills__container{
+    margin-top: 5px;
+  }
+}

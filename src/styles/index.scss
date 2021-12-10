@@ -1,0 +1,14 @@
+@use 'reset';
+@use 'vars';
+
+body {
+  font-family: sans-serif;
+}
+
+$width: 768px;
+
+@mixin mobile {
+    @media (max-width: #{$width}){
+        @content
+    }
+}

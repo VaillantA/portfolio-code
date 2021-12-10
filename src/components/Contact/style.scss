@@ -1,0 +1,228 @@
+
+.contact {
+  background-color: white;
+  position: relative;
+  
+}
+
+.contact__container{
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10%;
+  width: 100vw;
+  height: 85.8vh;
+  &.dark{
+    background:#161927;
+  }
+
+  //* Left part styling
+  .left {
+    flex: 1 ;
+    height: 100%;
+    padding-left: 5%;
+    background-color: white;
+
+    img{
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  //* Right part styling 
+  .right{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &.dark{
+      background-color: #161927;
+    }
+    .download{
+      margin-top: 0px;
+    }
+
+    .main--title{
+      margin-top: 3%;
+      font-size: 30px;
+      font-family: "Heebo";
+      color: #40916c;
+    }
+    .main--title.dark{
+      color: white;
+    }
+
+
+    //* Form Element Styling
+
+    form {
+      width: 70%;
+      height: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+
+      input{
+        width: 300px;
+        height: 30px;
+        font-size: 14px;
+        font-family: "Heebo";
+        border-radius: 10px; 
+        border: 1px solid;
+        padding: 5px;
+      }
+
+      textarea{
+        width: 300px;
+        height: 150px;
+        font-size: 14px;
+        font-family: "Heebo";
+        margin-top: 10px;
+        border-radius: 10px;
+        padding: 5px;
+      }
+
+      .button-send{
+        width: 150px;
+        height: 30px;
+        color: white;
+        background-color: #40916C;
+        border: none;
+        border-radius: 20px;
+        font-weight: 500;
+        cursor: pointer;
+        margin-top: 10px;
+        font-weight: bold;
+        
+        &.dark {
+          background-color: #f72585;
+        }
+      }
+      button:hover{
+        transform: scale(1.1);
+        -webkit-transition: transform 0.5s ease-in-out;
+
+      }
+
+      span {
+        color: green;
+      }
+    }
+    
+    //* Flags Styling
+    .container__flag{
+      width: 100px;
+      margin-top: 3%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo_countries{
+        max-width: 40px;
+        cursor: pointer;
+      }
+      .logo_countries:hover{
+        transform: scale(1.1);
+        -webkit-transition: transform 0.5s ease-in-out;
+      }
+    }
+
+    //* Contact informations styling
+    .information__container{
+      font-family: "Heebo";
+      width: 100%;
+      margin-top: 5%;
+      &.dark{
+        background:#161927
+      }
+      h2{
+        font-size: 30px;
+        font-family: "Heebo";
+        color: #40916c;
+        text-align: center;
+      }
+      .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 40px;
+      }
+      .contact__information{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .contact__icon{
+          font-size: 2rem;
+          color: #40916c;
+
+          &.dark{
+            color: white;
+          }
+        }
+        .information--title{
+          font-size: 20px;
+          font-family: "Heebo";
+          color: black;
+          font-weight: 400;
+          // text-align: center;
+          &.dark{
+            color: #f72585;
+          }
+        }
+        .information--subtitle{
+          font-size: 14px;
+          color: grey;
+          &.dark{
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+//* Responsive CSS
+@media screen and (max-width: 800px) {
+
+    form{
+      margin-bottom: 20px;
+    }
+    .contact__container{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      .left{
+        display: none;
+      }
+      .right{
+        max-height: 40%;
+        position:absolute;
+        top: 0%;
+      }
+      .download{
+        margin-top: 40px;
+      }
+    }
+
+    .information__container{
+      .container{
+      display: flex;
+      flex-direction: column;  
+
+      .contact__information{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+      width: 80vh;
+      margin-bottom: 20px;
+      }
+    }
+  }
+}
